@@ -4,16 +4,15 @@ Trabalho desenvolvido durante a disciplina de BD1
 # Sumário
 
 ### 1. COMPONENTES<br>
-Integrantes do grupo<br>
 Gabriel Nascimento dos Passos: npassos01@gmail.com <br>
 Luiza de Alencar: luiza.d.alencar@gmail.com <br>
 Rebeca Borlini: rebecaborlini@gmail.com <br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
-A escola de idiomas “Naruhodo!” sempre teve como objetivo garantir um ensino de qualidade juntamente com um relacionamento direto entre alunos e professores. No entanto, com o advento da pandemia a nível mundial que estamos vivendo atualmente, muitos alunos se veem desacreditados em continuar seus estudos. Aqueles que estão fazendo as aulas online sentem a necessidade de estarem convivendo no ambiente proporcionado pela escola e por isso temos a necessidade proporcionar um lugar mais seguro possível para os alunos que querem fazer aulas presenciais durante este período. Para executar esta tarefa, a escola necessita de um sistema que ajude a gerir e controlar o número de pessoas frequentando os ambientes com o principal objetivo de evitar possíveis aglomerações em lounges e corredores. O sistema desenvolvido executa tal objetivo focando em gerir o número possível de alunos em sala de aula por hora de acordo com a disponibilidade de cada professor em agendamentos de horários.
+<p align = "justify">A escola de idiomas “Naruhodo!” sempre teve como objetivo garantir um ensino de qualidade juntamente com um relacionamento direto entre alunos e professores. No entanto, com o advento da pandemia a nível mundial que estamos vivendo atualmente, muitos alunos se veem desacreditados em continuar seus estudos. Aqueles que estão fazendo as aulas online sentem a necessidade de estarem convivendo no ambiente proporcionado pela escola e por isso temos a necessidade proporcionar um lugar mais seguro possível para os alunos que querem fazer aulas presenciais durante este período. Para executar esta tarefa, a escola necessita de um sistema que ajude a gerir e controlar o número de pessoas frequentando os ambientes com o principal objetivo de evitar possíveis aglomerações em lounges e corredores. O sistema desenvolvido executa tal objetivo focando em gerir o número possível de alunos em sala de aula por hora de acordo com a disponibilidade de cada professor em agendamentos de horários.</p>
 
 ### 3.MINI-MUNDO<br>
-A escola de idiomas "Naruhodo!" está planejando dar aulas presenciais para os alunos que não conseguem fazer aulas online com seus professores. Para isso, é necessário que haja um controle para não lotar a escola e manter o número de alunos presentes limitado para evitar contágio entre aluno e professor. É preciso que dos alunos sejam armazenados identificação, nome, email e o idioma estudado. Das recepcionistas suas identificações, nomes e cargas horárias. As salas de aulas são necessárias saber a capacidade e sua identificação por andar e número da sala. E os professores o idioma que leciona, nome e sua identificação.Um aluno agenda a aula com apenas uma recepcionista, mas pode estudar com qualquer professor, desde que haja disponibilidade no momento. Este mesmo aluno estuda apenas uma língua, mas uma língua pode ser ensinada a vários alunos. A recepcionista agenda a aula dos alunos e confirma uma sala de aula juntamente com a data e hora desta aula e um professor para o aluno. O professor leciona sua aula de acordo com a quantidade agendada pela recepcionista e pode dar aula de um até a capacidade da sala de aula.
+<p align="justify">A escola de idiomas "Naruhodo!" está planejando dar aulas presenciais para os alunos que não conseguem fazer aulas online com seus professores. Para isso, é necessário que haja um controle para não lotar a escola e manter o número de alunos presentes limitado para evitar contágio entre aluno e professor. É preciso que dos alunos sejam armazenados identificação, nome, email e o idioma estudado. Das recepcionistas suas identificações, nomes e cargas horárias. As salas de aulas são necessárias saber a capacidade e sua identificação por andar e número da sala. E os professores o idioma que leciona, nome e sua identificação.Um aluno agenda a aula com apenas uma recepcionista, mas pode estudar com qualquer professor, desde que haja disponibilidade no momento. Este mesmo aluno estuda apenas uma língua, mas uma língua pode ser ensinada a vários alunos. A recepcionista agenda a aula dos alunos e confirma uma sala de aula juntamente com a data e hora desta aula e um professor para o aluno. O professor leciona sua aula de acordo com a quantidade agendada pela recepcionista e pode dar aula de um até a capacidade da sala de aula.</p>
 
 ### 4.PROTOTIPAÇÃO, PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
 #### 4.1 RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
@@ -66,12 +65,35 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 Descrição dos dados 
-    [objeto]: [descrição do objeto]
-    
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
-
+ALUNO: Tabela que armazena as informações relativas aos alunos.<br>
+id_aluno: Campo do tipo serial que contém o código identificador do aluno, utilizada como chave primária da tabela.<br>
+nome_aluno: Campo do tipo varchar que armazena o nome do aluno.<br>
+email_aluno: Campo do tipo varchar que armazena o E-mail do aluno.<br>
+idioma_aluno: Campo do tipo varchar que armazena o idioma que o aluno cursa.<br>
+<br>
+RECEPCIONISTA: Tabela que armazena as informações relativas ao acesso das recepcionistas.<br>
+id_recep: Campo do tipo serial que contém o código identificador da recepcionista, utilizada como chave primária da tabela.<br>
+nome_recep: Campo do tipo varchar que armazena o nome do usuário da recepcão<br>
+senha_recep: Campo do tipo varchar que armazena a senha de acesso a agenda da escola.<br>
+<br>
+PROFESSOR: Tabela que armazena as informações relativas aos professores.<br>
+id_prof: Campo do tipo serial que contém o código de identificação do professor, utilizada como chave primária da tabela.<br>
+nome_prof: Campo do tipo varchar que armazena o nome do professor.<br>
+idioma_prof: Campo do tipo varchar que armazena o idioma que o professor leciona.<br>
+<br>
+SALA_DE_AULA: Tabela que armazena as informações relativas às salas de aulas.<br>
+id_sala: Campo do tipo serial que contém o código de identificação da sala, utilizada como chave primária da tabela.<br>
+andar_sala: Campo do tipo inteiro que armazena o andar da sala.<br>
+numero_sala: Campo do tipo inteiro que armazena o número da sala.<br>
+capacidade: Campo do tipo inteiro que armazena o número referente a quantidade total de pessoas permitida dentro da sala de aula.<br>
+<br>
+AGENDA: Tabela que marca a hora e data de cada aula.<br>
+id_aluno: Chave estrangeira referente a tabela ALUNO.<br>
+id_prof: Chave estrangeira referente a tabela PROFESSOR.<br>
+id_recep: Chave estrangeira referente a tabela SALA.<br>
+id_sala: Chave estrangeira referente a tabela RECEPCIONISTA.<br>
+data: Campo do tipo date que armazena o dia da aula que foi agendada.<br>
+hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 
 ### 6	MODELO LÓGICO<br>
         a) inclusão do esquema lógico do banco de dados
@@ -79,17 +101,8 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
         (não serão aceitos modelos que não estejam em conformidade)
 
 ### 7	MODELO FÍSICO<br>
-        a) inclusão das instruções de criacão das estruturas em SQL/DDL 
-        (criação de tabelas, alterações, etc..) 
-        
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
-        (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados + insert para dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
-
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
