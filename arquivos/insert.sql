@@ -51,9 +51,3 @@ insert into Agenda (hora, data, id_aluno, id_prof, id_sala, id_recep) values
   ('2020-08-04 16:00:00', '2020-07-04', 8, 15, 108, 2020), 
   ('2020-08-04 16:00:00', '2020-07-04', 9, 15, 109, 2020), 
   ('2020-08-05 15:00:00', '2020-07-05', 10, 16, 110, 2020);
-  
-create table Aluno2 as select * from Aluno;
-create table Recepcionista2 as select * from Recepcionista;
-create table Professor2 as select * from Professor;
-create table Sala_de_Aula2 as select * from Sala_de_Aula;
-create table Agenda2 as select * from Agenda;
