@@ -46,48 +46,36 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     
     
 ### 5.MODELO CONCEITUAL<br>
-    A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
-    B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 3 e o Máximo 5.
-        * informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
-    C) Principais fluxos de informação/entidades do sistema (mínimo 3). <br>Dica: normalmente estes fluxos estão associados as tabelas que conterão maior quantidade de dados 
-    D) Qualidade e Clareza
-        Garantir que a semântica dos atributos seja clara no esquema (nomes coerentes com os dados).
-        Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
-        e tuplas falsas (Aplicar os conceitos de normalização abordados).   
-        
-![Alt text](https://github.com/discipbd1/trab01/blob/master/images/concept_sample.png?raw=true "Modelo Conceitual")
-    
-    
-        
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/conceitual.jpeg?raw=true "Modelo Conceitual")
     
 #### 5.1 Validação do Modelo Conceitual
     [Grupo01]: [Nomes dos que participaram na avaliação]
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 Descrição dos dados 
-ALUNO: Tabela que armazena as informações relativas aos alunos.<br>
+<strong>ALUNO:</strong> Tabela que armazena as informações relativas aos alunos.<br>
 id_aluno: Campo do tipo serial que contém o código identificador do aluno, utilizada como chave primária da tabela.<br>
 nome_aluno: Campo do tipo varchar que armazena o nome do aluno.<br>
 email_aluno: Campo do tipo varchar que armazena o E-mail do aluno.<br>
 idioma_aluno: Campo do tipo varchar que armazena o idioma que o aluno cursa.<br>
 <br>
-RECEPCIONISTA: Tabela que armazena as informações relativas ao acesso das recepcionistas.<br>
+<strong>RECEPCIONISTA:</strong> Tabela que armazena as informações relativas ao acesso das recepcionistas.<br>
 id_recep: Campo do tipo serial que contém o código identificador da recepcionista, utilizada como chave primária da tabela.<br>
 nome_recep: Campo do tipo varchar que armazena o nome do usuário da recepcão<br>
 senha_recep: Campo do tipo varchar que armazena a senha de acesso a agenda da escola.<br>
 <br>
-PROFESSOR: Tabela que armazena as informações relativas aos professores.<br>
+<strong>PROFESSOR:</strong> Tabela que armazena as informações relativas aos professores.<br>
 id_prof: Campo do tipo serial que contém o código de identificação do professor, utilizada como chave primária da tabela.<br>
 nome_prof: Campo do tipo varchar que armazena o nome do professor.<br>
 idioma_prof: Campo do tipo varchar que armazena o idioma que o professor leciona.<br>
 <br>
-SALA_DE_AULA: Tabela que armazena as informações relativas às salas de aulas.<br>
+<strong>SALA_DE_AULA:</strong> Tabela que armazena as informações relativas às salas de aulas.<br>
 id_sala: Campo do tipo serial que contém o código de identificação da sala, utilizada como chave primária da tabela.<br>
 andar_sala: Campo do tipo inteiro que armazena o andar da sala.<br>
 numero_sala: Campo do tipo inteiro que armazena o número da sala.<br>
 capacidade: Campo do tipo inteiro que armazena o número referente a quantidade total de pessoas permitida dentro da sala de aula.<br>
 <br>
-AGENDA: Tabela que marca a hora e data de cada aula.<br>
+<strong>AGENDA:</strong> Tabela que marca a hora e data de cada aula.<br>
 id_aluno: Chave estrangeira referente a tabela ALUNO.<br>
 id_prof: Chave estrangeira referente a tabela PROFESSOR.<br>
 id_recep: Chave estrangeira referente a tabela SALA.<br>
@@ -96,13 +84,13 @@ data: Campo do tipo date que armazena o dia da aula que foi agendada.<br>
 hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 
 ### 6	MODELO LÓGICO<br>
-        a) inclusão do esquema lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual 
-        (não serão aceitos modelos que não estejam em conformidade)
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/logico.jpeg?raw=true "Modelo Logico")
 
 ### 7	MODELO FÍSICO<br>
-       
+[Modelo Físico](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/modelofisico.sql)
+
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
+[Insert + Create](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/insert.sql)
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
