@@ -85,23 +85,26 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 [Modelo Físico](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/modelofisico.sql)
 
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-[Insert + Create](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/insert.sql)
+#### 8.1 INCLUSÃO DAS INSTRUÇÕES DE INSERÇÃO DOS DADOS NAS TABELAS CRIADAS PELO SCRIPT DE MODELO FÍSICO
+[Create + Insert + Drop](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/insert.sql)
+
+#### 8.2 BANCO DE RESTAURAÇÃO
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
-select * from aluno;
+    select * from aluno;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_aluno.jpeg "Select - Aluno")
 
-select * from professor;
+    select * from professor;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_professor.jpeg "Select - Professor")
 
-select * from recepcionista;
+    select * from recepcionista;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_recepcionista.jpeg "Select - Recepcionista")
 
-select * from sala_de_aula;
+    select * from sala_de_aula;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_salas.jpeg "Select - Salas de Aula")
 
-select * from agenda;
+    select * from agenda;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_agenda.jpeg "Select - Agenda")
 
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
