@@ -16,12 +16,7 @@ Rebeca Borlini: rebecaborlini@gmail.com <br>
 
 ### 4.PROTOTIPAÇÃO, PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
 #### 4.1 RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
-
-Sugestão: https://balsamiq.com/products/mockups/<br>
-
-![Alt text](https://github.com/discipbd1/trab01/blob/master/balsamiq.png?raw=true "Title")
-![Arquivo PDF do Protótipo Balsamiq feito para Empresa Devcom](https://github.com/discipbd1/trab01/blob/master/arquivos/EmpresaDevcom.pdf?raw=true "Empresa Devcom")
+[Protótipos - Escola Nahurodo!](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/Telas.pdf?raw=true "Escola Nahurodo!")
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
@@ -93,8 +88,21 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 [Insert + Create](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/insert.sql)
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+select * from aluno;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_aluno.jpeg "Select - Aluno")
+
+select * from professor;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_professor.jpeg "Select - Professor")
+
+select * from recepcionista;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_recepcionista.jpeg "Select - Recepcionista")
+
+select * from sala_de_aula;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_salas.jpeg "Select - Salas de Aula")
+
+select * from agenda;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_agenda.jpeg "Select - Agenda")
 
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
