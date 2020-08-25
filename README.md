@@ -30,8 +30,8 @@ Rebeca Borlini: rebecaborlini@gmail.com <br>
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/conceitual.jpeg?raw=true "Modelo Conceitual")
     
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Nomes dos que participaram na avaliação]
-    [Grupo02]: [Nomes dos que participaram na avaliação]
+    Grupo 1: Gustavo Andrade
+    Grupo 2: Kelvin Lehrback
 
 #### 5.2 Descrição dos dados 
 <strong>ALUNO:</strong> Tabela que armazena as informações relativas aos alunos.<br>
