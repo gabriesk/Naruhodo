@@ -18,27 +18,13 @@ Rebeca Borlini: rebecaborlini@gmail.com <br>
 #### 4.1 RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 [Protótipos - Escola Nahurodo!](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/Telas.pdf?raw=true "Escola Nahurodo!")
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
-    b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
-    
-> A Empresa DevCom precisa inicialmente dos seguintes relatórios:
-* Relatório que mostre o nome de cada supervisor(a) e a quantidade de empregados supervisionados.
-* Relatório relativo aos os supervisores e supervisionados. O resultado deve conter o nome do supervisor e nome do supervisionado além da quantidade total de horas que cada supervisionado tem alocada aos projetos existentes na empresa.
-* Relatorio que mostre para cada linha obtida o nome do departamento, o valor individual de cada salario existente no  departamento e a média geral de salarios dentre todos os empregados. Os resultados devem ser apresentados ordenados por departamento.
-* Relatório que mostre as informações relacionadas a todos empregados de empresa (sem excluir ninguém). As linhas resultantes devem conter informações sobre: rg, nome, salario do empregado, data de início do salario atual, nomes dos projetos que participa, quantidade de horas e localização nos referidos projetos, numero e nome dos departamentos aos quais está alocado, informações do historico de salário como inicio, fim, e valores de salarios antigos que foram inclusos na referida tabela (caso possuam informações na mesma), além de todas informações relativas aos dependentes. 
->> ##### Observações: <br> a) perceba que este relatório pode conter linhas com alguns dados repetidos (mas não todos). <br>  b) para os empregados que não possuirem alguma destas informações o valor no registro deve aparecer sem informação/nulo. 
-* Relatório que obtenha a frequencia absoluta e frequencia relativa da quantidade de cpfs únicos no relatório anterior. Apresente os resultados ordenados de forma decrescente pela frequencia relativa.
-
- 
+<p align="justify">- Relatório das aulas agendadas, incluindo as seguintes informações: nome do aluno, nome do professor, número da sala de aula, idioma, hora e dia. Os resultados devem ser apresentados do agendamento mais recente ao mais antigo.</p>
+<p align="justify">- Relatório de professores e aulas por eles ministradas, tendo como informações: nome do professor, idioma que leciona, data, hora e número da sala de aula. Os resultados devem ser apresentados da aula mais recente à mais antiga.</p>
+<p align="justify">- Relatório dos alunos matriculados na escola, incluindo as seguintes informações: nome do aluno, email e idioma que estuda.</p>
+<p align="justify">- Relatório dos idiomas mais agendados na escola, incluindo as seguintes informações: idioma, quantidade de alunos por idioma.</p>
+<p align="justify">- Relatório das salas de aula e sua utilização, incluindo as seguintes informações: andar, número da sala, hora e data.</p> 
  
 #### 4.3 TABELA DE DADOS DO SISTEMA:
-    a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
-    --- Cortado ---b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados 
-    e deve ser criada antes do modelo conceitual
-    c) Após criada esta tabela não deve ser modificada, pois será comparada com os resultados finais na conclusão do trabalho
-    
-![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/discipbd1/trab01/blob/master/arquivos/TabelaEmpresaDevCom_sample.xlsx?raw=true "Tabela - Empresa Devcom")
-    
     
 ### 5.MODELO CONCEITUAL<br>
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/conceitual.jpeg?raw=true "Modelo Conceitual")
@@ -85,10 +71,7 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 [Modelo Físico](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/modelofisico.sql)
 
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-#### 8.1 INCLUSÃO DAS INSTRUÇÕES DE INSERÇÃO DOS DADOS NAS TABELAS CRIADAS PELO SCRIPT DE MODELO FÍSICO
-[Create + Insert + Drop](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/insert.sql)
-
-#### 8.2 BANCO DE RESTAURAÇÃO
+[Create + Insert + Restauração + Drop](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/insert.sql)
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
