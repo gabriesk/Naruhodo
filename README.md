@@ -90,7 +90,7 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_salas.jpeg "Select - Salas de Aula")
 
     select * from agenda;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_agenda.jpeg "Select - Agenda")
+
 
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
