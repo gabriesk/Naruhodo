@@ -95,10 +95,10 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
-   Select nome_prof, idioma_prof from Professor where (idioma_prof='inglês');
-   Select * from Aluno where where (idioma_aluno='espanhol');
-   Select * from Aluno where where (idioma_aluno='inglês');
-   Select * from Sala_de_Aula where (andar_sala=1);
+    Select nome_prof, idioma_prof from Professor where (idioma_prof='inglês');
+    Select * from Aluno where where (idioma_aluno='espanhol');
+    Select * from Aluno where where (idioma_aluno='inglês');
+    Select * from Sala_de_Aula where (andar_sala=1);
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
