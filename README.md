@@ -96,9 +96,13 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
     Select nome_prof, idioma_prof from Professor where (idioma_prof='inglês');
-    Select * from Aluno where where (idioma_aluno='espanhol');
-    Select * from Aluno where where (idioma_aluno='inglês');
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_1.png "Select where 1")
+    Select * from Aluno where (idioma_aluno='espanhol');
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_2.png "Select where 2")
+    Select * from Aluno where (idioma_aluno='inglês');
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_3.png "Select where 3")
     Select * from Sala_de_Aula where (andar_sala=1);
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_4.png "Select where 4")
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
