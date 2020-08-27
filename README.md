@@ -114,11 +114,17 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     delete from Agenda where id_aluno=2;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_delete_1.png "Select delete 1")
     delete from Professor where id_prof=12;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_delete_2.png "Select delete 2")
     delete from Agenda where id_aluno=5;
-    update Aluno set idioma_aluno= 'inglês' where nome='Lucas';
-    update Agenda set data='2020-08-05' where id_aluno=3;
-    update Agenda set id_sala= '108' where id_aluno=9;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_delete_3.png "Select delete 3")
+    update Aluno set idioma_aluno= 'inglês' where nome_aluno='Lucas';
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_update_1.png "Select update 1")
+    update Agenda set id_prof=10 where id_aluno=8;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_update_2.png "Select update 2")
+    update Agenda set id_sala= '101' where id_aluno=8;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_update_3.png "Select update 3")
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
