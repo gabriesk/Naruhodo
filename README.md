@@ -95,6 +95,10 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+   Select nome_prof, idioma_prof from Professor where (idioma_prof='inglês');
+   Select * from Aluno where where (idioma_aluno='espanhol');
+   Select * from Aluno where where (idioma_aluno='inglês');
+   Select * from Sala_de_Aula where (andar_sala=1);
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
@@ -105,8 +109,12 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     b) Criar uma consulta para cada tipo de função data apresentada.
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-    a) Criar minimo 3 de exclusão
-    b) Criar minimo 3 de atualização
+    delete from Agenda where id_aluno=2;
+    delete from Professor where id_prof=12;
+    delete from Agenda where id_aluno=5;
+    update Aluno set idioma_aluno= 'inglês' where nome='Lucas';
+    update Agenda set data='2020-08-05' where id_aluno=3;
+    update Agenda set id_sala= '108' where id_aluno=9;
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
