@@ -107,6 +107,7 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     
     select * from sala_de_aula where (andar_sala = 2 AND capacidade > 0);
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-a1.png)
     
     select id_aluno, id_prof from agenda where NOT id_recep = 2020;
     
