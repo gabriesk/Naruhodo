@@ -105,6 +105,49 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_4.png "Select where 4")
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
+    
+    select * from sala_de_aula where (andar_sala = 2 AND capacidade > 0);
+    
+    select id_aluno, id_prof from agenda where NOT id_recep = 2020;
+    
+    
+    select id_aluno, id_prof, data, hora from agenda where (id_prof = 15 OR id_prof = 10);
+    
+    
+    select * from aluno where NOT (idioma_aluno = 'francês') AND (id_aluno > 5);
+    
+    
+    select nome_prof from professor where (idioma_prof = 'inglês' or idioma_prof = 'francês');
+    
+    
+    
+    
+    select data, hora, id_sala, id_aluno, id_prof, ((id_aluno/id_aluno)+(id_prof/id_prof)) AS lotacao_sala from agenda;
+    
+    
+    select id_sala, (capacidade * 2) as cap_real from sala_de_aula;
+    
+    select id_sala, (capacidade / 2) as cap_aula_vip from sala_de_aula
+    
+    
+    
+    
+    select id_sala as sala_disponivel from sala_de_aula where (capacidade > 0);
+    
+    
+    select id_prof, nome_prof as prof_ingles from professor where (idioma_prof = 'inglês');
+    
+    
+    select nome_aluno as alunos_esp, email_aluno from aluno where (idioma_aluno = 'espanhol');
+    
+    
+    
+    
+    
+    
+    
+    
+    
     b) Criar no mínimo 3 consultas com operadores aritméticos 
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 
