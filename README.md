@@ -167,8 +167,66 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_update_3.png "Select update 3")
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
-    a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
-    b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+    select aluno.nome_aluno as Aluno,
+    aluno.idioma_aluno as Idioma,
+    professor.nome_prof as Professor,
+    sala_de_aula.andar_sala as Andar,
+    sala_de_aula.numero_sala as Numero,
+    recepcionista.nome_recep as Recepcionista,
+    agenda.hora,
+    agenda.data from agenda
+    inner join aluno on (aluno.id_aluno = agenda.id_aluno)
+    inner join professor on (professor.id_prof = agenda.id_prof)
+    inner join sala_de_aula on (sala_de_aula.id_sala = agenda.id_sala)
+    inner join recepcionista on (recepcionista.id_recep = agenda.id_recep)
+    order by data desc;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.6-1.png?raw=true "INNER JOIN E ORDER BY 1")
+
+    select professor.nome_prof as Professor,
+    professor.idioma_prof as Idioma,
+    sala_de_aula.numero_sala as Numero_Sala,
+    agenda.hora,
+    agenda.data from agenda
+    inner join professor on (professor.id_prof = agenda.id_prof)
+    inner join sala_de_aula on (sala_de_aula.id_sala = agenda.id_sala)
+    order by data desc;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.6-2.png?raw=true "INNER JOIN E ORDER BY 2")
+
+    select sala_de_aula.andar_sala as Andar,
+    sala_de_aula.numero_sala as Numero_Sala,
+    agenda.hora,
+    agenda.data from agenda
+    inner join sala_de_aula on (sala_de_aula.id_sala = agenda.id_sala)
+    order by data asc;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.6-3.png?raw=true "INNER JOIN E ORDER BY 3")
+
+    select aluno.idioma_aluno as Idioma,
+    count(aluno.idioma_aluno) as Quantidade from agenda
+    inner join aluno on (aluno.id_aluno = agenda.id_aluno)
+    group by aluno.idioma_aluno
+    order by idioma_aluno asc;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.6-4.png?raw=true "INNER JOIN E ORDER BY 4")
+
+    select aluno.nome_aluno,
+    aluno.idioma_aluno as Idioma,
+    aluno.email_aluno as Email from Agenda
+    inner join aluno on (aluno.id_aluno = agenda.id_aluno)
+    order by nome_aluno asc;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.6-5.png?raw=true "INNER JOIN E ORDER BY 5")
+
+    select aluno.nome_aluno as Aluno,
+    professor.nome_prof as Professor,
+    sala_de_aula.numero_sala as Numero,
+    recepcionista.nome_recep as Recepcionista,
+    agenda.hora,
+    agenda.data from agenda
+    inner join aluno on (aluno.id_aluno = agenda.id_aluno)
+    inner join professor on (professor.id_prof = agenda.id_prof)
+    inner join sala_de_aula on (sala_de_aula.id_sala = agenda.id_sala)
+    inner join recepcionista on (recepcionista.id_recep = agenda.id_recep)
+    order by data desc;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.6-6.png?raw=true "INNER JOIN E ORDER BY 6")
+
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
