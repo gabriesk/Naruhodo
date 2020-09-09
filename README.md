@@ -232,7 +232,20 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
-    a) Criar minimo 1 de cada tipo
+    select * from aluno right join agenda on aluno.id_aluno = agenda.id_aluno
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.8-1.png?raw=true "CONSULTAS COM LEFT, RIGHT E FULL JOIN 1")
+
+    select * from professor prof left join agenda ag on prof.id_prof = ag.id_prof
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.8-2.png?raw=true "CONSULTAS COM LEFT, RIGHT E FULL JOIN 2")
+
+    select * from sala_de_aula sala full outer join agenda ag on sala.id_sala = ag.id_sala
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.8-3.png?raw=true "CONSULTAS COM LEFT, RIGHT E FULL JOIN 3")
+
+    select aluno.nome_aluno as Nome,
+    aluno.idioma_aluno as Idioma,
+    agenda.data,
+    agenda as hora from aluno right join agenda on aluno.id_aluno = agenda.id_aluno
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.8-4.png?raw=true "CONSULTAS COM LEFT, RIGHT E FULL JOIN 4")
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
     Nenhuma das Tabelas foi possível usar SELF JOIN.
