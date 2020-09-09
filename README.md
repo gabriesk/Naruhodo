@@ -244,7 +244,7 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     select aluno.nome_aluno as Nome,
     aluno.idioma_aluno as Idioma,
     agenda.data,
-    agenda as hora from aluno right join agenda on aluno.id_aluno = agenda.id_aluno
+    agenda.hora from aluno right join agenda on aluno.id_aluno = agenda.id_aluno
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.8-4.png?raw=true "CONSULTAS COM LEFT, RIGHT E FULL JOIN 4")
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
