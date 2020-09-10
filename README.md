@@ -276,7 +276,45 @@ b) Criar uma consulta para cada tipo de função data apresentada.
 
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
-    a) Criar minimo 2 envolvendo algum tipo de junção
+    Select aluno.idioma_aluno,
+    COUNT(aluno.idioma_aluno) as quantidade from agenda 
+    inner join aluno on (aluno.id_aluno = agenda.id_aluno)
+    group by aluno.idioma_aluno
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.7-1.png?raw=true "CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO 1")
+
+    Select professor.id_prof,
+    professor.idioma_prof,
+    COUNT(*) as quantidade from agenda 
+    inner join professor on (professor.id_prof = agenda.id_prof)
+    group by professor.id_prof,professor.idioma_prof
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.7-2.png?raw=true "CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO 2")
+
+    Select sala_de_aula.id_sala,
+    aluno.id_aluno,
+    avg(sala_de_aula.capacidade) as media_por_sala from agenda
+    inner join aluno on (aluno.id_aluno = agenda.id_aluno)
+    inner join sala_de_aula on (sala_de_aula.id_sala = agenda.id_sala)
+    group by sala_de_aula.id_sala,aluno.id_aluno
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.7-3.png?raw=true "CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO 3")
+
+    Select aluno.idioma_aluno,
+    COUNT(aluno.idioma_aluno) as quantidade from agenda 
+    inner join aluno on (aluno.id_aluno = agenda.id_aluno)
+    group by aluno.idioma_aluno
+    having COUNT(aluno.idioma_aluno) >= 2
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.7-4.png?raw=true "CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO 4")
+
+    Select professor.id_prof,
+    professor.idioma_prof,
+    COUNT(professor.idioma_prof) as quantidade from agenda 
+    inner join professor on (professor.id_prof = agenda.id_prof)
+    group by professor.id_prof,professor.idioma_prof
+    having COUNT(professor.idioma_prof) = 2
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.7-5.png?raw=true "CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO 5")
+
+    Select sum(capacidade) as capacidade_total from sala_de_aula
+    group by sala_de_aula.capacidade
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.7-6.png?raw=true "CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO 6")
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     select * from aluno right join agenda on aluno.id_aluno = agenda.id_aluno
