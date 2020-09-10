@@ -153,8 +153,46 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-    a) Criar outras 5 consultas que envolvam like ou ilike
-    b) Criar uma consulta para cada tipo de função data apresentada.
+   a) Criar outras 5 consultas que envolvam like ou ilike
+   
+    select * from professor where nome_prof like 'M%'
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like1.png)   
+        
+    select * from aluno where nome_aluno ilike 'a%'
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like2.png)    
+    
+    select nome_aluno, email_aluno from aluno where email_aluno like '%@gmail.com%'
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like3.png)    
+    
+    select nome_aluno from aluno where nome_aluno ilike '%a'
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like4.png)   
+    
+    select * from recepcionista where nome_recep ilike '_l%'
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like5.png)   
+    
+    select * from professor where idioma_prof ilike 'f%'
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like6.png)    
+    
+    select nome_aluno, idioma_aluno from aluno where idioma_aluno like '____ês'
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like7.png)    
+    
+    select nome_prof from professor where nome_prof like '%la%'
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like8.png)    
+    
+    
+b) Criar uma consulta para cada tipo de função data apresentada.
+    
+    select data,id_aluno, id_prof, (age(current_date,data)) as dias_atras from agenda
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/date1.png)    
+        
+    select data, id_aluno, id_prof, extract(month from data) as mes from agenda
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/date2.png)   
+        
+    select data, id_aluno, id_prof, date_part('year', data) from agenda
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/date3.png)    
+       
+    select id_aluno, id_prof, (age(now(),data)) as dias_atras from agenda
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/date4.png)       
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     delete from Agenda where id_aluno=2;
