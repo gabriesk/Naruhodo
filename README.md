@@ -97,12 +97,16 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
     Select nome_prof, idioma_prof from Professor where (idioma_prof='inglês');
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_1.png "Select where 1")
+  
     Select * from Aluno where (idioma_aluno='espanhol');
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_2.png "Select where 2")
+    
     Select * from Aluno where (idioma_aluno='inglês');
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_3.png "Select where 3")
+    
     Select * from Sala_de_Aula where (andar_sala=1);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_4.png "Select where 4")
+
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     
@@ -155,14 +159,19 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     delete from Agenda where id_aluno=2;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_delete_1.png "Select delete 1")
+    
     delete from Professor where id_prof=12;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_delete_2.png "Select delete 2")
+    
     delete from Agenda where id_aluno=5;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_delete_3.png "Select delete 3")
+    
     update Aluno set idioma_aluno= 'inglês' where nome_aluno='Lucas';
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_update_1.png "Select update 1")
+    
     update Agenda set id_prof=10 where id_aluno=8;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_update_2.png "Select update 2")
+    
     update Agenda set id_sala= '101' where id_aluno=8;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_update_3.png "Select update 3")
 
@@ -251,14 +260,19 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     Nenhuma das Tabelas foi possível usar SELF JOIN.
     create view data_hora_aluno as select data, hora, Aluno.nome_aluno from Agenda inner join Aluno on (Aluno.id_aluno=Agenda.id_aluno);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_1.png "Select views 1")
+    
     create view data_hora_prof as select data, hora, Professor.nome_prof from Agenda inner join Professor on (Professor.id_prof=Agenda.id_prof);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_2.png "Select views 2")
+    
     create view aluno_email as select nome_aluno, email_aluno from Aluno;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_3.png "Select views 3")
+    
     create view idiomas_oferecidas as select idioma_prof from Professor;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_4.png "Select views 4")
+    
     create view salas as select numero_sala, andar_sala from Sala_de_Aula;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_5.png "Select views 5")
+    
     create view aluno_prof as select Aluno.nome_aluno, Professor.nome_prof from Aluno inner join Agenda on (Agenda.id_aluno = Aluno.id_aluno) inner join Professor on (Agenda.id_prof = Professor.id_prof);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_6.png "Select views 6")
 
