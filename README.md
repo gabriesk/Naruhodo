@@ -333,11 +333,14 @@ b) Criar uma consulta para cada tipo de função data apresentada.
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.8-4.png?raw=true "CONSULTAS COM LEFT, RIGHT E FULL JOIN 4")
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
-    Nenhuma das Tabelas foi possível usar SELF JOIN.
-    create view data_hora_aluno as select data, hora, Aluno.nome_aluno from Agenda inner join Aluno on (Aluno.id_aluno=Agenda.id_aluno);
+   Nenhuma das Tabelas foi possível usar SELF JOIN.
+    
+    create view data_hora_aluno as select data, hora, Aluno.nome_aluno from Agenda 
+    inner join Aluno on (Aluno.id_aluno=Agenda.id_aluno);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_1.png "Select views 1")
     
-    create view data_hora_prof as select data, hora, Professor.nome_prof from Agenda inner join Professor on (Professor.id_prof=Agenda.id_prof);
+    create view data_hora_prof as select data, hora, Professor.nome_prof from Agenda 
+    inner join Professor on (Professor.id_prof=Agenda.id_prof);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_2.png "Select views 2")
     
     create view aluno_email as select nome_aluno, email_aluno from Aluno;
