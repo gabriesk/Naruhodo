@@ -73,7 +73,7 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 [Modelo Físico](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/modelofisico.sql)
 
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-[Create + Insert + Restauração + Drop](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/insert.sql)
+[Drop + Create + Insert + Restauração](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/insert.sql)
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
