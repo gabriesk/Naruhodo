@@ -75,8 +75,8 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 [Drop + Create + Insert + Restauração](https://github.com/rebecaborlini/Naruhodo/blob/master/arquivos/insert.sql)
 
-### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-#### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+### 9	TABELAS E PRINCIPAIS CONSULTAS <br>
+#### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS <br>
     select * from aluno;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_aluno.jpeg "Select - Aluno")
 
@@ -92,9 +92,7 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     select * from agenda;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_agenda.jpeg "Select - Agenda")
 
-># Marco de Entrega 01: Do item 1 até o item 9.1<br>
-
-#### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+#### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE <br>
     Select nome_prof, idioma_prof from Professor where (idioma_prof='inglês');
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_1.png "Select where 1")
   
@@ -107,9 +105,7 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     Select * from Sala_de_Aula where (andar_sala=1);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_4.png "Select where 4")
 
-#### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-   a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
-    
+#### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS <br>
     select * from sala_de_aula where (andar_sala = 2 AND capacidade > 0);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-a1.png)
     
@@ -123,10 +119,7 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-a4.png)      
     
     select nome_prof from professor where (idioma_prof = 'inglês' or idioma_prof = 'francês');
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-a5.png)      
-    
-    
-   b) Criar no mínimo 3 consultas com operadores aritméticos
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-a5.png)
    
     select data, hora, id_sala, id_aluno, id_prof, ((id_aluno/id_aluno)+(id_prof/id_prof)) AS lotacao_sala from agenda;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-b1.png)      
@@ -135,14 +128,10 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-b2.png)
 
     select id_sala, (capacidade / 2) as cap_aula_vip from sala_de_aula
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-b3.png)      
-    
-    
-  c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-b3.png)
   
     select id_sala as sala_disponivel from sala_de_aula where (capacidade > 0);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-c1.png)      
-    
     
     select id_prof, nome_prof as prof_ingles from professor where (idioma_prof = 'inglês');
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-b2.png)      
@@ -150,11 +139,7 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     select nome_aluno as alunos_esp, email_aluno from aluno where (idioma_aluno = 'espanhol');
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-c3.png)      
     
-
-
-#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-   a) Criar outras 5 consultas que envolvam like ou ilike
-   
+#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS <br>
     select * from professor where nome_prof like 'M%'
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like1.png)   
         
@@ -179,9 +164,6 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     select nome_prof from professor where nome_prof like '%la%'
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like8.png)    
     
-    
-b) Criar uma consulta para cada tipo de função data apresentada.
-    
     select data,id_aluno, id_prof, (age(current_date,data)) as dias_atras from agenda
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/date1.png)    
         
@@ -194,7 +176,7 @@ b) Criar uma consulta para cada tipo de função data apresentada.
     select id_aluno, id_prof, (age(now(),data)) as dias_atras from agenda
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/date4.png)       
 
-#### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
+#### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS <br>
     delete from Agenda where id_aluno=2;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_delete_1.png "Select delete 1")
     
@@ -213,7 +195,7 @@ b) Criar uma consulta para cada tipo de função data apresentada.
     update Agenda set id_sala= '101' where id_aluno=8;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_update_3.png "Select update 3")
 
-#### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
+#### 9.6	CONSULTAS COM INNER JOIN E ORDER BY <br>
     select aluno.nome_aluno as Aluno,
     aluno.idioma_aluno as Idioma,
     professor.nome_prof as Professor,
@@ -274,8 +256,7 @@ b) Criar uma consulta para cada tipo de função data apresentada.
     order by data desc;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.6-6.png?raw=true "INNER JOIN E ORDER BY 6")
 
-
-#### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
+#### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO <br>
     Select aluno.idioma_aluno,
     COUNT(aluno.idioma_aluno) as quantidade from agenda 
     inner join aluno on (aluno.id_aluno = agenda.id_aluno)
@@ -316,7 +297,7 @@ b) Criar uma consulta para cada tipo de função data apresentada.
     group by sala_de_aula.capacidade
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.7-6.png?raw=true "CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO 6")
 
-#### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
+#### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN <br>
     select * from aluno right join agenda on aluno.id_aluno = agenda.id_aluno
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.8-1.png?raw=true "CONSULTAS COM LEFT, RIGHT E FULL JOIN 1")
 
@@ -332,7 +313,7 @@ b) Criar uma consulta para cada tipo de função data apresentada.
     agenda.hora from aluno right join agenda on aluno.id_aluno = agenda.id_aluno
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.8-4.png?raw=true "CONSULTAS COM LEFT, RIGHT E FULL JOIN 4")
 
-#### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
+#### 9.9	CONSULTAS COM SELF JOIN E VIEW <br>
    Nenhuma das Tabelas foi possível usar SELF JOIN.
     
     create view data_hora_aluno as select data, hora, Aluno.nome_aluno from Agenda 
@@ -357,7 +338,7 @@ b) Criar uma consulta para cada tipo de função data apresentada.
     inner join Professor on (Agenda.id_prof = Professor.id_prof);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_6.png "Select views 6")
 
-#### 9.10	SUBCONSULTAS (Mínimo 4)<br>     
+#### 9.10	SUBCONSULTAS <br>     
      select id_aluno, id_prof, id_sala, id_recep from agenda where id_recep in (select id_recep from agenda where id_recep<>1010 group by id_aluno, id_prof, id_sala, id_recep);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/sub1.png)
      
@@ -369,9 +350,6 @@ b) Criar uma consulta para cada tipo de função data apresentada.
      
      select * from aluno where idioma_aluno in (select distinct idioma_aluno from aluno where idioma_aluno <> 'inglês');
   ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/sub4.png)   
-     
-     
-># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
 
 ### 10 RELATÓRIOS E GRÁFICOS
 
