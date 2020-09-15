@@ -352,13 +352,12 @@ b) Criar uma consulta para cada tipo de função data apresentada.
     create view salas as select numero_sala, andar_sala from Sala_de_Aula;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_5.png "Select views 5")
     
-    create view aluno_prof as select Aluno.nome_aluno, Professor.nome_prof from Aluno inner join Agenda on (Agenda.id_aluno = Aluno.id_aluno) inner join Professor on (Agenda.id_prof = Professor.id_prof);
+    create view aluno_prof as select Aluno.nome_aluno, Professor.nome_prof from Aluno 
+    inner join Agenda on (Agenda.id_aluno = Aluno.id_aluno) 
+    inner join Professor on (Agenda.id_prof = Professor.id_prof);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_6.png "Select views 6")
 
-#### 9.10	SUBCONSULTAS (Mínimo 4)<br>
-   a) Criar minimo 1 envolvendo GROUP BY
-   b) Criar minimo 1 envolvendo algum tipo de junção
-     
+#### 9.10	SUBCONSULTAS (Mínimo 4)<br>     
      select id_aluno, id_prof, id_sala, id_recep from agenda where id_recep in (select id_recep from agenda where id_recep<>1010 group by id_aluno, id_prof, id_sala, id_recep);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/sub1.png)
      
