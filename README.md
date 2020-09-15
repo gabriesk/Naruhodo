@@ -339,7 +339,8 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_6.png "Select views 6")
 
 #### 9.10	SUBCONSULTAS <br>     
-     select id_aluno, id_prof, id_sala, id_recep from agenda where id_recep in (select id_recep from agenda where id_recep<>1010 group by id_aluno, id_prof, id_sala, id_recep);
+     select id_aluno, id_prof, id_sala, id_recep from agenda 
+     where id_recep in (select id_recep from agenda where id_recep<>1010 group by id_aluno, id_prof, id_sala, id_recep);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/sub1.png)
      
      select id_sala as sala_desocupada from Sala_de_Aula where id_sala not in (select capacidade from agenda where capacidade = 5);
