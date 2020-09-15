@@ -340,16 +340,20 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 
 #### 9.10	SUBCONSULTAS <br>     
      select id_aluno, id_prof, id_sala, id_recep from agenda 
-     where id_recep in (select id_recep from agenda where id_recep<>1010 group by id_aluno, id_prof, id_sala, id_recep);
+     where id_recep in 
+     (select id_recep from agenda where id_recep<>1010 group by id_aluno, id_prof, id_sala, id_recep);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/sub1.png)
      
-     select id_sala as sala_desocupada from Sala_de_Aula where id_sala not in (select capacidade from agenda where capacidade = 5);
+     select id_sala as sala_desocupada from Sala_de_Aula 
+     where id_sala not in (select capacidade from agenda where capacidade = 5);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/sub2.png)     
      
-     select P.idioma_prof, count(*) from agenda as A inner join professor as P on (P.id_prof = A.id_prof) group by P.idioma_prof;
+     select P.idioma_prof, count(*) from agenda as A 
+     inner join professor as P on (P.id_prof = A.id_prof) group by P.idioma_prof;
  ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/sub3.png)    
      
-     select * from aluno where idioma_aluno in (select distinct idioma_aluno from aluno where idioma_aluno <> 'inglês');
+     select * from aluno where idioma_aluno in 
+     (select distinct idioma_aluno from aluno where idioma_aluno <> 'inglês');
   ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/sub4.png)   
 
 ### 10 RELATÓRIOS E GRÁFICOS
