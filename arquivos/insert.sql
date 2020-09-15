@@ -1,3 +1,10 @@
+/* DROP DAS TABELAS */
+DROP TABLE IF EXISTS ALUNO cascade;
+DROP TABLE IF EXISTS PROFESSOR cascade;
+DROP TABLE IF EXISTS RECEPCIONISTA cascade;
+DROP TABLE IF EXISTS SALA_DE_AULA cascade;
+DROP TABLE IF EXISTS AGENDA cascade;
+
 /* CREATE DAS TABELAS */
 create table Aluno (
   id_aluno serial, 
@@ -101,10 +108,3 @@ create table Recepcionista2 as select * from Recepcionista;
 create table Professor2 as select * from Professor;
 create table Sala_de_Aula2 as select * from Sala_de_Aula;
 create table Agenda2 as select * from Agenda;
-  
-/* DROP DAS TABELAS */
-DROP TABLE IF EXISTS ALUNO cascade;
-DROP TABLE IF EXISTS PROFESSOR cascade;
-DROP TABLE IF EXISTS RECEPCIONISTA cascade;
-DROP TABLE IF EXISTS SALA_DE_AULA cascade;
-DROP TABLE IF EXISTS AGENDA cascade;
