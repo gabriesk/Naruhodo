@@ -176,24 +176,24 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     select id_aluno, id_prof, (age(now(),data)) as dias_atras from agenda
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/date4.png)       
 
-#### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS <br>
-    delete from Agenda where id_aluno=2;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_delete_1.png "Select delete 1")
+#### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS <br>  
+    update sala_de_aula set capacidade=15 where id_sala=104;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-5-update-1.png "Select update 1")
     
-    delete from Professor where id_prof=12;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_delete_2.png "Select delete 2")
+    update agenda set id_recep=3030 where id_recep=4040;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-5-update-2.png "Select update 2")
     
-    delete from Agenda where id_aluno=5;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_delete_3.png "Select delete 3")
+    update agenda set id_sala=203 where id_prof=13131;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-5-update-3.png "Select update 3")
+
+    delete from professor where id_prof=18181;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-5-delete-1.png "Select delete 1")
     
-    update Aluno set idioma_aluno= 'inglês' where nome_aluno='Lucas';
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_update_1.png "Select update 1")
+    delete from recepcionista where id_recep=4040;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-5-delete-2.png "Select delete 2")
     
-    update Agenda set id_prof=10 where id_aluno=8;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_update_2.png "Select update 2")
-    
-    update Agenda set id_sala= '101' where id_aluno=8;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_update_3.png "Select update 3")
+    delete from aluno where id_aluno=15;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-5-delete-3.png "Select delete 3")
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY <br>
     select aluno.nome_aluno as Aluno,
