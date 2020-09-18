@@ -26,7 +26,7 @@ Rebeca Borlini: rebecaborlini@gmail.com <br>
  
 #### 4.3 TABELA DE DADOS DO SISTEMA:
 
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/tabela43.png?raw=true "Dados do Sistema")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/tabela43.png "Dados do Sistema")
     
 ### 5.MODELO CONCEITUAL<br>
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/conceitual.jpeg?raw=true "Modelo Conceitual")
