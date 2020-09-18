@@ -103,13 +103,13 @@ insert into Professor (id_prof, nome_prof, idioma_prof) values
   
 insert into Sala_de_Aula (id_sala, numero_sala, andar_sala, capacidade) values 
   (101, 1, 1, 5), 
-  (102, 2, 1, 5), 
+  (102, 2, 1, 10), 
   (103, 3, 1, 5), 
   (104, 4, 1, 5), 
   (105, 5, 1, 5), 
   (201, 6, 2, 5), 
   (202, 7, 2, 5), 
-  (203, 8, 2, 5), 
+  (203, 8, 2, 15), 
   (204, 9, 2, 5), 
   (205, 10, 2, 5);
   
