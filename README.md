@@ -90,7 +90,7 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_sala_de_aula.png "Select - Salas de Aula")
 
     select * from agenda;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_agenda.png "Select - Agenda")
+![Alt text]( "Select - Agenda")
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE <br>
     Select nome_prof, idioma_prof from Professor where (idioma_prof='inglês');
