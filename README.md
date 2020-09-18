@@ -78,32 +78,32 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 ### 9	TABELAS E PRINCIPAIS CONSULTAS <br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS <br>
     select * from aluno;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_aluno.jpeg "Select - Aluno")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_aluno.png "Select - Aluno")
 
     select * from professor;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_professor.jpeg "Select - Professor")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_professor.png "Select - Professor")
 
     select * from recepcionista;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_recepcionista.jpeg "Select - Recepcionista")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_recepcionista.png "Select - Recepcionista")
 
     select * from sala_de_aula;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_salas.jpeg "Select - Salas de Aula")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_sala_de_aula.png "Select - Salas de Aula")
 
     select * from agenda;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_agenda.jpeg "Select - Agenda")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_agenda.png "Select - Agenda")
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE <br>
     Select nome_prof, idioma_prof from Professor where (idioma_prof='inglês');
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_1.png "Select where 1")
+![Alt text]("Select where 1")
   
     Select * from Aluno where (idioma_aluno='espanhol');
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_2.png "Select where 2")
+![Alt text]( "Select where 2")
     
     Select * from Aluno where (idioma_aluno='inglês');
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_3.png "Select where 3")
+![Alt text]("Select where 3")
     
     Select * from Sala_de_Aula where (andar_sala=1);
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_where_4.png "Select where 4")
+![Alt text]("Select where 4")
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS <br>
     select * from sala_de_aula where (andar_sala = 2 AND capacidade > 0);
