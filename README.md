@@ -349,7 +349,7 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     select data, hora, professor.nome_prof as professores, aluno.nome_aluno as alunos from agenda 
     inner join professor on (professor.id_prof = agenda.id_prof) 
     inner join aluno on (aluno.id_aluno = agenda.id_aluno) group by data, hora, professores, alunos;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.9-6.png "Select views 6")
+![Alt text]( "Select views 6")
 
 #### 9.10	SUBCONSULTAS <br>     
      select id_aluno, id_prof, id_sala, id_recep from agenda 
