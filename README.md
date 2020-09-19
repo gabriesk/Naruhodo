@@ -371,9 +371,9 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 
 ### 10 RELATÓRIOS E GRÁFICOS
 
-#**Conexão com postgres e Relatórios do Sistema**
+**Conexão com postgres e Relatórios do Sistema**
 
-##**Instalando bibliotecas de acesso ao postgres, manipulação de dados e gráficos** 
+**Instalando bibliotecas de acesso ao postgres, manipulação de dados e gráficos** 
 
     #!pip install --user psycopg2-binary
     #!pip install --user seaborn
@@ -390,20 +390,21 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 
     conn=psycopg2.connect(host="motty.db.elephantsql.com", database="obzfwmvi", user="obzfwmvi", password="jTtTSw4eBETm8qmJocZRTpKNRE76woKC")
 
-# **Relatórios**
+## **Relatórios**
 
-## **Relatório 1**
+### **Relatório 1**
 ### **Objetivo: Obter relatório que mostre o nome dos idiomas oferecidos pela Escola, e quantos professores dão aula.**
 
 Código para obtenção do resultado:
 
-    res=pd.read_sql_query("""select idioma_prof as Idioma, count(idioma_prof) as Quantidade from Professor group by idioma_prof order by idioma_prof asc;""", conn)
+    res=pd.read_sql_query("""select idioma_prof as Idioma, count(idioma_prof) as Quantidade from Professor 
+    group by idioma_prof order by idioma_prof asc;""", conn)
     res
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio1a.png) 
 
     sns.barplot(x='idioma', y='quantidade', data=res)
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio1b.png) 
-# ============================================================
+# =============================================
 ## **Relatório 2**
 ### **Objetivo: Obter relatório que mostre o nome dos idiomas oferecidos pela Escola, e quantos alunos fazem as aulas dos idiomas.**
 
@@ -416,7 +417,7 @@ Código para obtenção do resultado:
 
     sns.barplot(x='idioma', y='quantidade', data=res)
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio2b.png) 
-# ============================================================
+# =============================================
 ## **Relatório 3**
 ### **Objetivo: Obter relatório que mostre os nomes dos professores, e quantos alunos cada professor vai dar aula.**
 
@@ -430,7 +431,7 @@ Código para obtenção do resultado:
  
     sns.barplot(x='professor', y='quantidade', data=res)
  ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio3b.png)
-# ============================================================
+# =============================================
 ## **Relatório 4**
 ### **Objetivo: Obter relatório que mostra a quantidade de pessoas na sala no horário das aulas, e a capacidade permitida na sala.**
 
@@ -444,7 +445,7 @@ Código para obtenção do resultado:
  
     sns.barplot(x='quantidade_de_pessoas', y='capacidade', data=res)
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio4b.png) 
-# ============================================================
+# =============================================
 ## **Relatório 5**
 ### **Objetivo: Obter relatório que mostra a quantidade de aulas dada por dia.**
 
