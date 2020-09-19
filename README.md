@@ -444,7 +444,7 @@ Código para obtenção do resultado:
  ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio4a.png)
  
     sns.barplot(x='quantidade_de_pessoas', y='capacidade', data=res)
-![Alt text]()
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio4b.png)
 # =============================================
 ## **Relatório 5**
 ### **Objetivo: Obter relatório que mostra a quantidade de aulas dada por dia.**
