@@ -316,27 +316,29 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW <br>
    Nenhuma das Tabelas foi possível usar SELF JOIN.
     
-    create view data_hora_aluno as select data, hora, Aluno.nome_aluno from Agenda 
-    inner join Aluno on (Aluno.id_aluno=Agenda.id_aluno);
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_1.png "Select views 1")
-    
-    create view data_hora_prof as select data, hora, Professor.nome_prof from Agenda 
-    inner join Professor on (Professor.id_prof=Agenda.id_prof);
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_2.png "Select views 2")
+    create view quantidades_de_aulas_por_aluno as 
+    select count(data) as quantidade_de_aulas, nome_aluno from aluno 
+    inner join agenda on (aluno.id_aluno = agenda.id_aluno) 
+    group by nome_aluno order by nome_aluno asc;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/create_view_1.png "Select views 1")
     
     create view aluno_email as select nome_aluno, email_aluno from Aluno;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_3.png "Select views 3")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/create_view_2.png "Select views 2")
     
     create view idiomas_oferecidas as select idioma_prof from Professor;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_4.png "Select views 4")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/create_view_3.png "Select views 3")
     
     create view salas as select numero_sala, andar_sala from Sala_de_Aula;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_5.png "Select views 5")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/create_view_4.png "Select views 4")
     
-    create view aluno_prof as select Aluno.nome_aluno, Professor.nome_prof from Aluno 
-    inner join Agenda on (Agenda.id_aluno = Aluno.id_aluno) 
-    inner join Professor on (Agenda.id_prof = Professor.id_prof);
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/select_views_6.png "Select views 6")
+    create view aluno_inglês as select Aluno.nome_aluno from Aluno where idioma_aluno='inglês';
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/create_view_5.png "Select views 5")
+    
+    create view aluno_professor as 
+    select data, hora, professor.nome_prof as professores, aluno.nome_aluno as alunos from agenda 
+    inner join professor on (professor.id_prof = agenda.id_prof) 
+    inner join aluno on (aluno.id_aluno = agenda.id_aluno);
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/create_view_6.png "Select views 6")
 
 #### 9.10	SUBCONSULTAS <br>     
      select id_aluno, id_prof, id_sala, id_recep from agenda 
