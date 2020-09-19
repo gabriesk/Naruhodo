@@ -320,25 +320,36 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     select count(data) as quantidade_de_aulas, nome_aluno from aluno 
     inner join agenda on (aluno.id_aluno = agenda.id_aluno) 
     group by nome_aluno order by nome_aluno asc;
-![Alt text]( "Select views 1")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.9-1.png "Select views 1")
     
     create view aluno_email as select nome_aluno, email_aluno from Aluno;
-![Alt text]( "Select views 2")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.9-2.png "Select views 2")
     
-    create view idiomas_oferecidas as select idioma_prof from Professor;
-![Alt text]( "Select views 3")
+    create view idiomas_oferecidas as select idioma_prof from Professor group by idioma_prof;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.9-3.png "Select views 3")
     
-    create view salas as select numero_sala, andar_sala from Sala_de_Aula;
-![Alt text]( "Select views 4")
+    create view professor_da_hora as select professor.nome_prof as professores, 
+    sala_de_aula.numero_sala, agenda.data, agenda.hora from agenda 
+    inner join professor on (professor.id_prof = agenda.id_prof) 
+    inner join sala_de_aula on (sala_de_aula.id_sala = agenda.id_sala) 
+    group by professor.nome_prof, sala_de_aula.numero_sala, agenda.data, 
+    agenda.hora order by agenda.data asc;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.9-4.png "Select views 4")
     
-    create view aluno_inglês as select Aluno.nome_aluno from Aluno where idioma_aluno='inglês';
-![Alt text]( "Select views 5")
+    create view quantidade_de_pessoas_na_sala as select sala_de_aula.numero_sala, 
+    sala_de_aula.capacidade, agenda.data, agenda.hora, 
+    count(aluno.id_aluno)+1 as quantidade from agenda 
+    inner join aluno on (aluno.id_aluno=agenda.id_aluno) 
+    inner join sala_de_aula on (sala_de_aula.id_sala=agenda.id_sala) 
+    group by sala_de_aula.id_sala, sala_de_aula.capacidade, 
+    agenda.data, agenda.hora order by agenda.data asc
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.9-5.png "Select views 5")
     
     create view aluno_professor as 
     select data, hora, professor.nome_prof as professores, aluno.nome_aluno as alunos from agenda 
     inner join professor on (professor.id_prof = agenda.id_prof) 
-    inner join aluno on (aluno.id_aluno = agenda.id_aluno);
-![Alt text]( "Select views 6")
+    inner join aluno on (aluno.id_aluno = agenda.id_aluno) group by data, hora, professores, alunos;
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.9-6.png "Select views 6")
 
 #### 9.10	SUBCONSULTAS <br>     
      select id_aluno, id_prof, id_sala, id_recep from agenda 
