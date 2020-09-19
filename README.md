@@ -399,10 +399,10 @@ Código para obtenção do resultado:
 
     res=pd.read_sql_query("""select idioma_prof as Idioma, count(idioma_prof) as Quantidade from Professor group by idioma_prof order by idioma_prof asc;""", conn)
     res
-![Alt text]() 
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio1a.png) 
 
     sns.barplot(x='idioma', y='quantidade', data=res)
-![Alt text]() 
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio1b.png) 
 # ============================================================
 ## **Relatório 2**
 ### **Objetivo: Obter relatório que mostre o nome dos idiomas oferecidos pela Escola, e quantos alunos fazem as aulas dos idiomas.**
@@ -412,10 +412,10 @@ Código para obtenção do resultado:
      res=pd.read_sql_query("""select idioma_aluno as Idioma, count(idioma_aluno) as Quantidade from Aluno 
      group by idioma_aluno order by idioma_aluno asc;""", conn)
      res
-![Alt text]() 
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio2a.png) 
 
     sns.barplot(x='idioma', y='quantidade', data=res)
-![Alt text]() 
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio2b.png) 
 # ============================================================
 ## **Relatório 3**
 ### **Objetivo: Obter relatório que mostre os nomes dos professores, e quantos alunos cada professor vai dar aula.**
@@ -426,10 +426,10 @@ Código para obtenção do resultado:
     inner join agenda on agenda.id_prof = professor.id_prof 
     group by professor.nome_prof order by professor.nome_prof asc""", conn)
     res
- ![Alt text]() 
+ ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio3a.png) 
  
     sns.barplot(x='professor', y='quantidade', data=res)
- ![Alt text]()
+ ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio3b.png)
 # ============================================================
 ## **Relatório 4**
 ### **Objetivo: Obter relatório que mostra a quantidade de pessoas na sala no horário das aulas, e a capacidade permitida na sala.**
@@ -440,10 +440,10 @@ Código para obtenção do resultado:
      inner join sala_de_aula on (sala_de_aula.id_sala = agenda.id_sala) 
      group by hora, sala_de_aula.capacidade  order by hora asc;""",conn)
      res
- ![Alt text]()
+ ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio4a.png)
  
     sns.barplot(x='quantidade_de_pessoas', y='capacidade', data=res)
-![Alt text]() 
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio4b.png) 
 # ============================================================
 ## **Relatório 5**
 ### **Objetivo: Obter relatório que mostra a quantidade de aulas dada por dia.**
@@ -453,10 +453,10 @@ Código para obtenção do resultado:
     res = pd.read_sql_query("""select data, count(data) as quantidade_de_aulas_por_dia from agenda 
     group by data""",conn)
     res
-![Alt text]() 
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio5a.png) 
 
     sns.barplot(x='data', y='quantidade_de_aulas_por_dia', data=res)
-![Alt text]() 
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio5b.png) 
     
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
