@@ -94,16 +94,16 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE <br>
     Select nome_prof, idioma_prof from Professor where (idioma_prof='inglês');
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-2-1.png "Select where 1")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.2-1.png "Select where 1")
   
     Select * from Aluno where (idioma_aluno='espanhol');
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-2-2.png "Select where 2")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.2-2.png "Select where 2")
     
     Select * from Aluno where (idioma_aluno='inglês');
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-2-3.png "Select where 3")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.2-3.png "Select where 3")
     
     Select * from Sala_de_Aula where (andar_sala=1);
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-2-4.png "Select where 4")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.2-4.png "Select where 4")
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS <br>
     select * from sala_de_aula where (andar_sala = 2 AND capacidade > 0);
@@ -178,22 +178,22 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS <br>  
     update sala_de_aula set capacidade=15 where id_sala=104;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-5-update-1.png "Select update 1")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.5-update1.png "Select update 1")
     
     update agenda set id_recep=3030 where id_recep=4040;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-5-update-2.png "Select update 2")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.5-update2.png "Select update 2")
     
     update agenda set id_sala=203 where id_prof=13131;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-5-update-3.png "Select update 3")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.5-update3.png "Select update 3")
 
     delete from professor where id_prof=18181;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-5-delete-1.png "Select delete 1")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.5-delete1.png "Select delete 1")
     
     delete from recepcionista where id_recep=4040;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-5-delete-2.png "Select delete 2")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.5-delete2.png "Select delete 2")
     
     delete from aluno where id_aluno=15;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-5-delete-3.png "Select delete 3")
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.5-delete3.png "Select delete 3")
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY <br>
     select aluno.nome_aluno as Aluno,
@@ -320,25 +320,25 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     select count(data) as quantidade_de_aulas, nome_aluno from aluno 
     inner join agenda on (aluno.id_aluno = agenda.id_aluno) 
     group by nome_aluno order by nome_aluno asc;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/create_view_1.png "Select views 1")
+![Alt text]( "Select views 1")
     
     create view aluno_email as select nome_aluno, email_aluno from Aluno;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/create_view_2.png "Select views 2")
+![Alt text]( "Select views 2")
     
     create view idiomas_oferecidas as select idioma_prof from Professor;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/create_view_3.png "Select views 3")
+![Alt text]( "Select views 3")
     
     create view salas as select numero_sala, andar_sala from Sala_de_Aula;
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/create_view_4.png "Select views 4")
+![Alt text]( "Select views 4")
     
     create view aluno_inglês as select Aluno.nome_aluno from Aluno where idioma_aluno='inglês';
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/create_view_5.png "Select views 5")
+![Alt text]( "Select views 5")
     
     create view aluno_professor as 
     select data, hora, professor.nome_prof as professores, aluno.nome_aluno as alunos from agenda 
     inner join professor on (professor.id_prof = agenda.id_prof) 
     inner join aluno on (aluno.id_aluno = agenda.id_aluno);
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/create_view_6.png "Select views 6")
+![Alt text]( "Select views 6")
 
 #### 9.10	SUBCONSULTAS <br>     
      select id_aluno, id_prof, id_sala, id_recep from agenda 
