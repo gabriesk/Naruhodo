@@ -375,20 +375,20 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
 
 ##**Instalando bibliotecas de acesso ao postgres, manipulação de dados e gráficos** 
 
-#!pip install --user psycopg2-binary
-#!pip install --user seaborn
-#!pip install --user pandas
+    #!pip install --user psycopg2-binary
+    #!pip install --user seaborn
+    #!pip install --user pandas
 
 ### **Importando bibliotecas**
 
-import seaborn as sns
-import matplotlib.pyplot as plt
-import pandas as pd
-import psycopg2
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+    import pandas as pd
+    import psycopg2
 
 ### **Usando psycopg2 para configurar conexão**
 
-conn=psycopg2.connect(host="motty.db.elephantsql.com", database="obzfwmvi", user="obzfwmvi", password="jTtTSw4eBETm8qmJocZRTpKNRE76woKC")
+    conn=psycopg2.connect(host="motty.db.elephantsql.com", database="obzfwmvi", user="obzfwmvi", password="jTtTSw4eBETm8qmJocZRTpKNRE76woKC")
 
 # **Relatórios**
 
@@ -397,59 +397,66 @@ conn=psycopg2.connect(host="motty.db.elephantsql.com", database="obzfwmvi", user
 
 Código para obtenção do resultado:
 
-res=pd.read_sql_query("""select idioma_prof as Idioma, count(idioma_prof) as Quantidade from Professor group by idioma_prof order by idioma_prof asc;""", conn)
-res
+    res=pd.read_sql_query("""select idioma_prof as Idioma, count(idioma_prof) as Quantidade from Professor group by idioma_prof order by idioma_prof asc;""", conn)
+    res
+![Alt text]() 
 
-sns.barplot(x='idioma', y='quantidade', data=res)
-
+    sns.barplot(x='idioma', y='quantidade', data=res)
+![Alt text]() 
 # ============================================================
 ## **Relatório 2**
 ### **Objetivo: Obter relatório que mostre o nome dos idiomas oferecidos pela Escola, e quantos alunos fazem as aulas dos idiomas.**
 
 Código para obtenção do resultado:
 
-res=pd.read_sql_query("""select idioma_aluno as Idioma, count(idioma_aluno) as Quantidade from Aluno 
-group by idioma_aluno order by idioma_aluno asc;""", conn)
-res
+     res=pd.read_sql_query("""select idioma_aluno as Idioma, count(idioma_aluno) as Quantidade from Aluno 
+     group by idioma_aluno order by idioma_aluno asc;""", conn)
+     res
+![Alt text]() 
 
-sns.barplot(x='idioma', y='quantidade', data=res)
-
+    sns.barplot(x='idioma', y='quantidade', data=res)
+![Alt text]() 
 # ============================================================
 ## **Relatório 3**
 ### **Objetivo: Obter relatório que mostre os nomes dos professores, e quantos alunos cada professor vai dar aula.**
 
 Código para obtenção do resultado:
 
-res=pd.read_sql_query("""select professor.nome_prof as professor, count(agenda.id_aluno) as quantidade from professor 
-inner join agenda on agenda.id_prof = professor.id_prof 
-group by professor.nome_prof order by professor.nome_prof asc""", conn)
-res
-
-sns.barplot(x='professor', y='quantidade', data=res)
-
+    res=pd.read_sql_query("""select professor.nome_prof as professor, count(agenda.id_aluno) as quantidade from professor 
+    inner join agenda on agenda.id_prof = professor.id_prof 
+    group by professor.nome_prof order by professor.nome_prof asc""", conn)
+    res
+ ![Alt text]() 
+ 
+    sns.barplot(x='professor', y='quantidade', data=res)
+ ![Alt text]()
 # ============================================================
 ## **Relatório 4**
 ### **Objetivo: Obter relatório que mostra a quantidade de pessoas na sala no horário das aulas, e a capacidade permitida na sala.**
 
 Código para obtenção do resultado:
 
-res = pd.read_sql_query("""select hora, count(hora)+1 as quantidade_de_pessoas, sala_de_aula.capacidade from agenda inner join sala_de_aula on (sala_de_aula.id_sala = agenda.id_sala) group by hora, sala_de_aula.capacidade  order by hora asc;""",conn)
-res
-
-sns.barplot(x='quantidade_de_pessoas', y='capacidade', data=res)
-
+     res = pd.read_sql_query("""select hora, count(hora)+1 as quantidade_de_pessoas, sala_de_aula.capacidade from agenda 
+     inner join sala_de_aula on (sala_de_aula.id_sala = agenda.id_sala) 
+     group by hora, sala_de_aula.capacidade  order by hora asc;""",conn)
+     res
+ ![Alt text]()
+ 
+    sns.barplot(x='quantidade_de_pessoas', y='capacidade', data=res)
+![Alt text]() 
 # ============================================================
 ## **Relatório 5**
 ### **Objetivo: Obter relatório que mostra a quantidade de aulas dada por dia.**
 
 Código para obtenção do resultado:
 
-res = pd.read_sql_query("""select data, count(data) as quantidade_de_aulas_por_dia from agenda 
-group by data""",conn)
-res
+    res = pd.read_sql_query("""select data, count(data) as quantidade_de_aulas_por_dia from agenda 
+    group by data""",conn)
+    res
+![Alt text]() 
 
-sns.barplot(x='data', y='quantidade_de_aulas_por_dia', data=res)
-
+    sns.barplot(x='data', y='quantidade_de_aulas_por_dia', data=res)
+![Alt text]() 
     
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
