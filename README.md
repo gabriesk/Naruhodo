@@ -112,7 +112,7 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     select id_aluno, id_prof from agenda where NOT id_recep = 2020;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-a2.png)    
         
-    select id_aluno, id_prof, data, hora from agenda where (id_prof = 15 OR id_prof = 10);
+    select id_aluno, id_prof, data, hora from agenda where (id_prof = 10101 OR id_prof = 20202);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-a3.png)    
     
     select * from aluno where NOT (idioma_aluno = 'francês') AND (id_aluno > 5);
@@ -127,53 +127,53 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     select id_sala, (capacidade * 2) as cap_real from sala_de_aula;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-b2.png)
 
-    select id_sala, (capacidade / 2) as cap_aula_vip from sala_de_aula
+    select id_sala, (capacidade / 2) as cap_aula_vip from sala_de_aula;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-b3.png)
   
     select id_sala as sala_disponivel from sala_de_aula where (capacidade > 0);
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-c1.png)      
     
     select id_prof, nome_prof as prof_ingles from professor where (idioma_prof = 'inglês');
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-b2.png)      
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-c2.png)      
     
     select nome_aluno as alunos_esp, email_aluno from aluno where (idioma_aluno = 'espanhol');
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9-3-c3.png)      
     
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS <br>
-    select * from professor where nome_prof like 'M%'
+    select * from professor where nome_prof like 'M%';
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like1.png)   
         
-    select * from aluno where nome_aluno ilike 'a%'
+    select * from aluno where nome_aluno ilike 'a%';
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like2.png)    
     
-    select nome_aluno, email_aluno from aluno where email_aluno like '%@gmail.com%'
+    select nome_aluno, email_aluno from aluno where email_aluno like '%@gmail.com%';
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like3.png)    
     
-    select nome_aluno from aluno where nome_aluno ilike '%a'
+    select nome_aluno from aluno where nome_aluno ilike '%a';
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like4.png)   
     
-    select * from recepcionista where nome_recep ilike '_l%'
+    select * from recepcionista where nome_recep ilike '_l%';
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like5.png)   
     
-    select * from professor where idioma_prof ilike 'f%'
+    select * from professor where idioma_prof ilike 'f%';
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like6.png)    
     
-    select nome_aluno, idioma_aluno from aluno where idioma_aluno like '____ês'
+    select nome_aluno, idioma_aluno from aluno where idioma_aluno like '____ês';
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like7.png)    
     
-    select nome_prof from professor where nome_prof like '%la%'
+    select nome_prof from professor where nome_prof like '%la%';
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/like8.png)    
     
-    select data,id_aluno, id_prof, (age(current_date,data)) as dias_atras from agenda
+    select data,id_aluno, id_prof, (age(current_date,data)) as dias_atras from agenda;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/date1.png)    
         
-    select data, id_aluno, id_prof, extract(month from data) as mes from agenda
+    select data, id_aluno, id_prof, extract(month from data) as mes from agenda;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/date2.png)   
         
-    select data, id_aluno, id_prof, date_part('year', data) from agenda
+    select data, id_aluno, id_prof, date_part('year', data) from agenda;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/date3.png)    
        
-    select id_aluno, id_prof, (age(now(),data)) as dias_atras from agenda
+    select id_aluno, id_prof, (age(now(),data)) as dias_atras from agenda;
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/date4.png)       
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS <br>  
