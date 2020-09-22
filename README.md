@@ -290,11 +290,12 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     COUNT(professor.idioma_prof) as quantidade from agenda 
     inner join professor on (professor.id_prof = agenda.id_prof)
     group by professor.id_prof,professor.idioma_prof
-    having COUNT(professor.idioma_prof) = 2
+    having COUNT(professor.idioma_prof) >= 2
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.7-5.png?raw=true "CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO 5")
 
-    Select sum(capacidade) as capacidade_total from sala_de_aula
-    group by sala_de_aula.capacidade
+    select data, 
+    count(data) as quantidade_de_aulas_por_dia from agenda 
+    group by data
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.7-6.png?raw=true "CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO 6")
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN <br>
