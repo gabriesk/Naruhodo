@@ -270,12 +270,12 @@ hora: Campo do tipo timestamp que armazena o horário da aula agendada.<br>
     group by professor.id_prof,professor.idioma_prof
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.7-2.png?raw=true "CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO 2")
 
-    Select sala_de_aula.id_sala,
-    aluno.id_aluno,
-    avg(sala_de_aula.capacidade) as media_por_sala from agenda
-    inner join aluno on (aluno.id_aluno = agenda.id_aluno)
-    inner join sala_de_aula on (sala_de_aula.id_sala = agenda.id_sala)
-    group by sala_de_aula.id_sala,aluno.id_aluno
+    select hora, 
+    count(hora)+1 as quantidade_de_pessoas, 
+    sala_de_aula.capacidade from agenda 
+    inner join sala_de_aula on (sala_de_aula.id_sala = agenda.id_sala) 
+    group by hora,sala_de_aula.capacidade  
+    order by hora asc
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/9.7-3.png?raw=true "CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO 3")
 
     Select aluno.idioma_aluno,
