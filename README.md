@@ -22,6 +22,7 @@ Rebeca Borlini: rebecaborlini@gmail.com <br>
 <p align="justify">- Relatório de professores e aulas por eles ministradas, tendo como informações: nome do professor, idioma que leciona, data, hora e número da sala de aula. Os resultados devem ser apresentados da aula mais recente à mais antiga.</p>
 <p align="justify">- Relatório dos alunos matriculados na escola, incluindo as seguintes informações: nome do aluno, email e idioma que estuda.</p>
 <p align="justify">- Relatório das salas de aula e sua utilização, incluindo as seguintes informações: andar, número da sala, hora e data.</p> 
+<p align="justify">- Relatório das recepcionistas e as aulas registradas, incluindo as seguintes informações: nome da recepcionista, senha de acesso.</p> 
  
 #### 4.3 TABELA DE DADOS DO SISTEMA:
 
