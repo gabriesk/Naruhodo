@@ -429,10 +429,10 @@ Código para obtenção do resultado:
     inner join agenda on agenda.id_prof = professor.id_prof
     group by professor order by professor asc""", conn)
     res
- ![Alt text]() 
+ ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio3a.png) 
  
     sns.barplot(x='professor', y='quantidade_alunos', data=res)
- ![Alt text]()
+ ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio3b.png)
 # =============================================
 ## **Relatório 4**
 ### **Objetivo: Obter relatório que mostra a quantidade de aulas marcadas por cada Recepcionista.**
@@ -444,10 +444,10 @@ Código para obtenção do resultado:
      inner join recepcionista on (recepcionista.id_recep = agenda.id_recep) 
      group by Recepcionistas order by Recepcionistas;""",conn)
      res
- ![Alt text]()
+ ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio4a.png)
  
     sns.barplot(x='recepcionistas', y='quantidade', data=res)
-![Alt text]()
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio4b.png)
 # =============================================
 ## **Relatório 5**
 ### **Objetivo: Obter relatório que mostra a quantidade de aulas dada por dia.**
@@ -457,10 +457,10 @@ Código para obtenção do resultado:
     res = pd.read_sql_query("""select data, count(data) as quantidade_de_aulas_por_dia from agenda 
     group by data""",conn)
     res
-![Alt text]() 
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio5a.png) 
 
     sns.barplot(x='data', y='quantidade_de_aulas_por_dia', data=res)
-![Alt text]() 
+![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio5b.png) 
     
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
