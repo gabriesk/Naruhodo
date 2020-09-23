@@ -424,28 +424,30 @@ Código para obtenção do resultado:
 
 Código para obtenção do resultado:
 
-    res=pd.read_sql_query("""select professor.nome_prof as professor, count(agenda.id_aluno) as quantidade from professor 
-    inner join agenda on agenda.id_prof = professor.id_prof 
-    group by professor.nome_prof order by professor.nome_prof asc""", conn)
+    res=pd.read_sql_query("""select professor.nome_prof as professor, 
+    count(agenda.id_aluno) as quantidade_alunos from professor 
+    inner join agenda on agenda.id_prof = professor.id_prof
+    group by professor order by professor asc""", conn)
     res
- ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio3a.png) 
+ ![Alt text]() 
  
-    sns.barplot(x='professor', y='quantidade', data=res)
- ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio3b.png)
+    sns.barplot(x='professor', y='quantidade_alunos', data=res)
+ ![Alt text]()
 # =============================================
 ## **Relatório 4**
-### **Objetivo: Obter relatório que mostra a quantidade de pessoas na sala no horário das aulas, e a capacidade permitida na sala.**
+### **Objetivo: Obter relatório que mostra a quantidade de aulas marcadas por cada Recepcionista.**
 
 Código para obtenção do resultado:
 
-     res = pd.read_sql_query("""select hora, count(hora)+1 as quantidade_de_pessoas, sala_de_aula.capacidade from agenda 
-     inner join sala_de_aula on (sala_de_aula.id_sala = agenda.id_sala) 
-     group by hora, sala_de_aula.capacidade  order by hora asc;""",conn)
+     res = pd.read_sql_query("""select recepcionista.nome_recep as Recepcionistas, 
+     count(agenda.id_recep) as quantidade from agenda 
+     inner join recepcionista on (recepcionista.id_recep = agenda.id_recep) 
+     group by Recepcionistas order by Recepcionistas;""",conn)
      res
- ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio4a.png)
+ ![Alt text]()
  
-    sns.barplot(x='quantidade_de_pessoas', y='capacidade', data=res)
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio4b.png)
+    sns.barplot(x='recepcionistas', y='quantidade', data=res)
+![Alt text]()
 # =============================================
 ## **Relatório 5**
 ### **Objetivo: Obter relatório que mostra a quantidade de aulas dada por dia.**
@@ -455,10 +457,10 @@ Código para obtenção do resultado:
     res = pd.read_sql_query("""select data, count(data) as quantidade_de_aulas_por_dia from agenda 
     group by data""",conn)
     res
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio5a.png) 
+![Alt text]() 
 
     sns.barplot(x='data', y='quantidade_de_aulas_por_dia', data=res)
-![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/10-relatorio5b.png) 
+![Alt text]() 
     
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
