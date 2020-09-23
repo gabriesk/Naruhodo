@@ -21,7 +21,6 @@ Rebeca Borlini: rebecaborlini@gmail.com <br>
 <p align="justify">- Relatório das aulas agendadas, incluindo as seguintes informações: nome do aluno, nome do professor, número da sala de aula, idioma, hora e dia. Os resultados devem ser apresentados do agendamento mais recente ao mais antigo.</p>
 <p align="justify">- Relatório de professores e aulas por eles ministradas, tendo como informações: nome do professor, idioma que leciona, data, hora e número da sala de aula. Os resultados devem ser apresentados da aula mais recente à mais antiga.</p>
 <p align="justify">- Relatório dos alunos matriculados na escola, incluindo as seguintes informações: nome do aluno, email e idioma que estuda.</p>
-<p align="justify">- Relatório dos idiomas mais agendados na escola, incluindo as seguintes informações: idioma, quantidade de alunos por idioma.</p>
 <p align="justify">- Relatório das salas de aula e sua utilização, incluindo as seguintes informações: andar, número da sala, hora e data.</p> 
  
 #### 4.3 TABELA DE DADOS DO SISTEMA:
