@@ -33,9 +33,9 @@ Rebeca Borlini: rebecaborlini@gmail.com <br>
     
 #### 5.1 Validação do Modelo Conceitual
 Grupo 1: Gustavo Andrade<br>
- Comparação entre modelos conceituais dos grupos e simplicidade do sistema ser funcional ou não.
+ Comparação entre modelos conceituais dos grupos e simplicidade do sistema ser funcional ou não.<br>
 Grupo 2: Kelvin Lehrback<br>
- Reparo no modelo conceitual em cardinalidade entre Agenda e Alunos que não ia de encontro com a proposta do banco.
+ Reparo no modelo conceitual em cardinalidade entre Agenda e Alunos que não ia de encontro com a proposta do banco.<br>
 
 #### 5.2 Descrição dos dados 
 <strong>ALUNO:</strong> Tabela que armazena as informações relativas aos alunos.<br>
