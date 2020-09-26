@@ -32,8 +32,10 @@ Rebeca Borlini: rebecaborlini@gmail.com <br>
 ![Alt text](https://github.com/rebecaborlini/Naruhodo/blob/master/images/conceitual.jpeg?raw=true "Modelo Conceitual")
     
 #### 5.1 Validação do Modelo Conceitual
-    Grupo 1: Gustavo Andrade
-    Grupo 2: Kelvin Lehrback
+Grupo 1: Gustavo Andrade
+ Comparação entre modelos conceituais dos grupos e simplicidade do sistema ser funcional ou não.
+Grupo 2: Kelvin Lehrback
+ Reparo no modelo conceitual em cardinalidade entre Agenda e Alunos que não ia de encontro com a proposta do banco.
 
 #### 5.2 Descrição dos dados 
 <strong>ALUNO:</strong> Tabela que armazena as informações relativas aos alunos.<br>
